@@ -1,0 +1,35 @@
+<div class="jumbotron">
+
+    <select name='lang' onChange="top.location.href=this.options[this.selectedIndex].value;">
+        <option value='en' >en</option>
+        <option value='de'  <?=$this->plugin('translate')->getTranslator()->getLocale()=='de_DE'? 'selected':''?>>de</option>
+        <option value='fr'  <?=$this->plugin('translate')->getTranslator()->getLocale()=='fr_FR'? 'selected':''?>>fr</option>
+    </select>
+
+
+    <h1 <span class="zf-green"> <?= $this->translate('title') ?> </span></h1>
+
+    <p>
+
+
+
+
+        <?= $this->translate('welcome') ?>
+
+
+
+    </p>
+
+    <p>
+        <a class="btn btn-success btn-lg" href="https://github.com/zendframework/zendframework" target="_blank">
+            <?= $this->translate('git') ?> &raquo;
+        </a>
+    </p>
+
+
+
+
+</div>
+
+
+
